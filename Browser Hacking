@@ -1,6 +1,6 @@
-# Hacking through the Browser
+# PHP Penteration Testing Techniques
 
-## PHP Hacks
+## Obtaining Shell through Browser Bar
 ```
 # If you get similar to ?page=index in the browser bar
 # In your attacking machine

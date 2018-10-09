@@ -1,6 +1,6 @@
-#SQL Penetration Testing Techniques
+## SQL Penetration Testing Techniques
 
-## Locate the localhost file making connection to the SQL
+### Locate the localhost file making connection to the SQL
 ```
 # Grep for localhost
 grep "localhost" ./ -R
@@ -9,7 +9,7 @@ grep "localhost" ./ -R
 cat ./path/to/config.php
 ```
 
-## Generic SQL commands
+### Generic SQL commands
 ```
 # Login to mysql
 mysql -u root -p

@@ -1,5 +1,10 @@
 ## SQL Penetration Testing Techniques
 
+### SQLMAP
+```
+sqlmap -u "http://domain.com"
+```
+
 ### Locate the localhost file making connection to the SQL
 ```
 # Grep for localhost

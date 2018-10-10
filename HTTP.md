@@ -6,7 +6,7 @@ nikto -host thedomain.com
 ```
 ---
 
-### To add ip's to your host file
+### To add IP's to your host file
 Add the following to the hosts file `10.11.1.140 domainname.com`
 
 Linux is `/etc/hosts`

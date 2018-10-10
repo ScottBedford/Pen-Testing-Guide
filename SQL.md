@@ -7,7 +7,7 @@ sqlmap -u "http://domain.com"
 
 ### Locate the localhost file making connection to the SQL
 ```
-# Grep for localhost
+# Grep for localhost from within /www/ dir
 grep "localhost" ./ -R
 
 # If presented with config.php or similar. Check for login details

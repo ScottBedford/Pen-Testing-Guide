@@ -2,6 +2,7 @@
 
 To attempt to view the /etc/passwd file </b>
 `http://host/index.php?page=./../../../../../etc/passwd%00`
+
 ---
 # Obtaining Shell through Browser Bar (PHP)
 ```

@@ -3,6 +3,8 @@
 ### Enumeration
 ```
 nikto -host thedomain.com
+
+dirb http://10.11.1.140
 ```
 ---
 

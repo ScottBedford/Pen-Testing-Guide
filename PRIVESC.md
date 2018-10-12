@@ -1,7 +1,14 @@
-## Privilege Escalation
+### Privilege Escalation
 
-### If you can modify files as root
-
+#### If you have found any passwords on the machine, try running as root
+```
+sudo su
+```
+#### Check which commands sudo can run
+``` 
+sudo -l
+``` 
+#### If you can modify files as root
 #### Try to add ssh public key to root/.ssh/authorized_keys
 ```
 # Generate ssh key pair

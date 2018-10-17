@@ -8,6 +8,7 @@ which filename		# Returns pathname for executable
 find / -name sbd*	# Find files matching sbd*
 man find		# For find or other manual
 passwd			# Change password
+su username		# Change user
 
 # Find files with name sbd and execute 'file' command to ascertain file type
 find / -name sbd* -exec file {} \;

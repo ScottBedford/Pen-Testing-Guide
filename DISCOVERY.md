@@ -16,7 +16,10 @@ nmap -p- 10.11.1.22
 # Scan for vulnerabilities on specific ports
 nmap --script vuln 10.11.1.22 -p 21,80
 ```
-
+#### Hostname
+```
+nmblookup -A 10.11.1.115
+```
 #### Netcat
 ```
 # Scan port 25 and check if open

@@ -10,7 +10,7 @@ hash-identifier
 unshadow passwd.txt shadow.txt > passwords.txt
 
 # Crack with john the ripper
-john --wordlist /usr/share/wordlists/sqlmap.txt passwords.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt --rules passwords.txt 
 
 # Check if cracked once session finishes
 john --show passwords.txt

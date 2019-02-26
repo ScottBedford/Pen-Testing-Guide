@@ -15,6 +15,10 @@ john --wordlist=/usr/share/wordlists/rockyou.txt --rules passwords.txt
 # Check if cracked once session finishes
 john --show passwords.txt
 ```
+#### John alternate method
+// Save your password in a file called temp
+john temp --wordlist=/usr/share/wordlists/rockyou.txt --fork=4
+```
 #### Hashcat
 ```
 # Copy just the hashes from /etc/shadow into a file called hashes.txt

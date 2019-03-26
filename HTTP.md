@@ -29,8 +29,13 @@ http://host/index.php?page=./../../../../../etc/passwd%00
 # Enumerate users on wordpress site
 wpscan targetsite.com --enumerate u
 ```
-
+---
 ### Spidering with Burpsuite
 ```
 
+```
+---
+### Check for web firewalls with wafw00f
+```
+wafw00f ip
 ```

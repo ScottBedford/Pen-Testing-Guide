@@ -30,6 +30,12 @@ john --format=zip hash.txt
 rar2john filename.rar > hash.txt
 john --format=rar hash.txt
 ```
+
+#### John direct cracking
+```
+john /etc/shadow
+```
+
 #### Hashcat
 ```
 # Copy just the hashes from /etc/shadow into a file called hashes.txt

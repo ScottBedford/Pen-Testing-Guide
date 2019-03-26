@@ -16,8 +16,19 @@ john --wordlist=/usr/share/wordlists/rockyou.txt --rules passwords.txt
 john --show passwords.txt
 ```
 #### John alternate method
-// Save your password in a file called temp
+```
+# Save your password in a file called temp
 john temp --wordlist=/usr/share/wordlists/rockyou.txt --fork=4
+```
+#### John with RAR/ZIP
+```
+# Get password hash for zip file
+zip2john filename.zip > hash.txt 
+john --format=zip hash.txt 
+
+# Get password hash for rar file
+rar2john filename.rar > hash.txt
+john --format=rar hash.txt
 ```
 #### Hashcat
 ```

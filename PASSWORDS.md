@@ -48,7 +48,7 @@ hashcat -m 500 -a 3 /usr/share/wordlists/rockyou.txt hashes.txt
 samdump2 SYSTEM SAM
 
 # Send the second part of the hash to hashkiller.co.uk
-Username:1000:aad3b435b51404eeaad3b435b51404ee:**26112010952d963c8dc4217daec986d9**:::
+Username:1000:aad3b435b51404eeaad3b435b51404ee:<this>26112010952d963c8dc4217daec986d9</this>:::
 ```
 
 

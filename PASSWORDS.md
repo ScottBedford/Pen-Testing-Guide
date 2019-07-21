@@ -41,3 +41,14 @@ john /etc/shadow
 # Copy just the hashes from /etc/shadow into a file called hashes.txt
 hashcat -m 500 -a 3 /usr/share/wordlists/rockyou.txt hashes.txt
 ```
+
+#### Windows SAM
+```
+# Use samdump2 from Windows/System32/config
+samdump2 SYSTEM SAM
+
+# Send the second part of the hash to hashkiller.co.uk
+# Username:1000:aad3b435b51404eeaad3b435b51404ee:**_26112010952d963c8dc4217daec986d9_**:::
+```
+
+

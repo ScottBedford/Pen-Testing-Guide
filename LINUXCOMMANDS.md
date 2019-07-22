@@ -38,3 +38,8 @@ update-rc.d ssh enable
 update-rc.d apache2 enable
 ```
 
+#### Mount drives/backups
+```
+# Mount a vhd file
+guestmount --add bakcupfile.vhd --inspector --ro /mnt/vhd -v
+```

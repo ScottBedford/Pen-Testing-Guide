@@ -10,6 +10,4 @@ hydra -e nsr -l root -P /root/Desktop/wordlists/10_million_password_list_top_100
 ```
 
 ### Close SSH connection
-```
-~.
-```
+`~.`

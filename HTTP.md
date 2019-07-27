@@ -39,3 +39,15 @@ wpscan targetsite.com --enumerate u
 ```
 wafw00f ip
 ```
+
+### Check if domain exists with aquatone
+```
+apt install chromium
+wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
+unzip aquatone_linux_amd64_1.7.0.zip
+mv aquatone /usr/local/bin/
+
+# Place all of your domains in a file called host
+# aquatone will check if exists, and take screenshot
+cat host | aquatone
+```

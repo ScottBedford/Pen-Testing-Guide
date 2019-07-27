@@ -6,7 +6,13 @@ hash-identifier
 ```
 
 #### Decode hashes
-`findmyhash SHA1 -h yourhash`
+```
+# Just add your hash type instead of SHA1
+findmyhash SHA1 -h yourhash
+
+# decode base64
+echo yourhash | based64 -d
+```
 
 #### John the Ripper
 ```

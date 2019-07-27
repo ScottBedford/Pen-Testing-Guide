@@ -4,6 +4,10 @@
 # In Kali
 hash-identifier
 ```
+
+#### Decode hashes
+`findmyhash SHA1 -h yourhash`
+
 #### John the Ripper
 ```
 # Copy /etc/shadow and /etc/passwd into text files and combine them

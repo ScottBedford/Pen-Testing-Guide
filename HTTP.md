@@ -39,7 +39,7 @@ wpscan targetsite.com --enumerate u
 ```
 wafw00f ip
 ```
-
+---
 ### Check if domain exists with aquatone
 ```
 apt install chromium

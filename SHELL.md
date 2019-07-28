@@ -1,4 +1,11 @@
 ### Bind/Reverse Shells
+
+#### Kali Shells
+```
+# Several shells located in Kali at
+/usr/share/laudanum/
+```
+
 #### Bind Shell (don't work behind firewalls)
 ```
 # On Windows machine offer shell

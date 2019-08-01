@@ -43,3 +43,9 @@ update-rc.d apache2 enable
 # Mount a vhd file
 guestmount --add bakcupfile.vhd --inspector --ro /mnt/vhd -v
 ```
+
+#### Check if you can run sudo commands
+```
+sudo -l
+# Enter password at prompt
+```

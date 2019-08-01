@@ -65,3 +65,8 @@ Now in your Windows bind/reverse shell run the ftp.txt file
 `ftp -v -n -s:ftp.txt`
 
 ---
+#### File Transfer using SSH
+```
+scp filename username@ipaddress
+# Then enter password at prompt
+```

@@ -7,5 +7,6 @@ cd /opt/pspy
 go build
 
 # Transfer pspy to target and run
+chmod +x pspy
 ./pspy
 ```

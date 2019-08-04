@@ -10,3 +10,5 @@ go build
 chmod +x pspy
 ./pspy
 ```
+#### Find files modified in home last 60 minutes
+`find /home -ctime -60`

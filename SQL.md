@@ -5,6 +5,13 @@
 sqlmap -u "http://domain.com"
 ```
 
+### Identifying vulnerabilities with SQLMap
+```
+# Intercept a login with burpsuite
+# Copy the intercept and save to a file login.req
+sqlmap -r login.req --level 5 --risk 3
+```
+
 ### Locate the localhost file making connection to the SQL
 ```
 # Grep for localhost from within /www/ dir

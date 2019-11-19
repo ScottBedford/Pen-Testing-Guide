@@ -86,4 +86,8 @@ pty.spawn("/bin/bash")
 ```
 
 ### Python PTY Shells
-`git clone https://github.com/infodox/python-pty-shells.git`
+```
+git clone https://github.com/infodox/python-pty-shells.git
+# tcp_pty_backconnect.py is the reverse shell, modify it with your ip/port
+# tcp_pty_shell_handler.py to handle the reverse shell
+```

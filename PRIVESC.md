@@ -8,6 +8,11 @@ sudo su
 ``` 
 sudo -l
 ``` 
+#### Check which version/year of Linux for privesc exploits
+```
+uname -a
+```
+
 #### If you can modify files as root
 #### Try to add ssh public key to root/.ssh/authorized_keys
 ```

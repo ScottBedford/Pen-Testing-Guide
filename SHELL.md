@@ -84,3 +84,6 @@ dup2(s.fileno(),2)
 import pty
 pty.spawn("/bin/bash")
 ```
+
+### Python PTY Shells
+`git clone https://github.com/infodox/python-pty-shells.git`

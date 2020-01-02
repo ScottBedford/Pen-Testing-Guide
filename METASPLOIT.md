@@ -14,3 +14,16 @@ workspace -h
 db_nmap -A <target ip>
 
 ```
+
+#### Privesc with a Meterpreter session
+```
+# Background your low-priv meterpreter session
+background
+
+# local_exploit_suggester
+use multi/recon/local_exploit_suggester
+
+# show options
+set session #
+exploit
+```

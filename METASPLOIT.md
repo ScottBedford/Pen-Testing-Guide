@@ -14,6 +14,10 @@ workspace -h
 db_nmap -A <target ip>
 
 ```
+#### Access a backgrounded meterpreter session
+```
+sessions -i <number>
+```
 
 #### Privesc with a Meterpreter session
 ```

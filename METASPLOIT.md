@@ -19,6 +19,20 @@ db_nmap -A <target ip>
 sessions -i <number>
 ```
 
+#### Check Architecture and Meterpreter Version
+```
+sysinfo
+```
+
+#### Migrate from 32-bit to 64-bit Meterpreter session
+```
+# From your meterpreter session
+ps
+
+# Migrate into an X64 process such as explorer.exe
+migrate <PID #>
+```
+
 #### Privesc with a Meterpreter session
 ```
 # Background your low-priv meterpreter session

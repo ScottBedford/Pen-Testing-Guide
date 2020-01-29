@@ -9,3 +9,8 @@ dig axfr @ipaddress domainname.com
 nano /etc/hosts
 ipaddress   admin.domainname.com other.domainname.com etc.domainname.com
 ```
+
+#### DNS Discovery
+```
+host -l <domain.name> <ip address> 
+```

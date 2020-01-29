@@ -34,3 +34,8 @@ cat /root/.ssh/id_rsa.pub
 # Then try and access through ssh from attacking machine
 ssh root@targetip
 ```
+
+#### Check the crontab for cron jobs you can exploit
+```
+cat /etc/crontab
+```

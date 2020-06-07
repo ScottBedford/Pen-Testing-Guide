@@ -3,6 +3,9 @@
 # Connect to SMB share using smbclient
 smbclient //MOUNT/share -I target -N
 
+# Another way to mount shares using smbclient
+smbclient \\\\<ip>\\<sharename>
+
 # Scan smb share using smbmap
 smbmap -H xx.xx.xx.xxx
 # or

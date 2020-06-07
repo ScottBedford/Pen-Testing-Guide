@@ -1,4 +1,10 @@
 ### Discovery
+#### Network
+```
+netdiscover -r xx.xx.xx.0/24
+
+arp-scan -l
+```
 #### Nmap
 ```bash
 # Identify target addresses on network

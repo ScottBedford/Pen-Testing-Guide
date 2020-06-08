@@ -25,6 +25,10 @@ nmap --script vuln 10.11.1.22 -p 21,80
 # Scan UDP
 nmap <ip> -sU
 ```
+#### Masscan
+```
+masscan -p1-65535 --rate 1000 <ip> 
+```
 #### Hostname
 ```
 nmblookup -A 10.11.1.115

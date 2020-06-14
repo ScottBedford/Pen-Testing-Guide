@@ -50,6 +50,9 @@ john /etc/shadow
 ```
 # Copy just the hashes from /etc/shadow into a file called hashes.txt
 hashcat -m 500 -a 3 /usr/share/wordlists/rockyou.txt hashes.txt
+
+# Windows hash
+hashcat -m 5600 hashes.txt rockyou.txt
 ```
 
 #### Windows SAM

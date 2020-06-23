@@ -89,3 +89,15 @@ Invoke-ShareFinder
 # Group Policies
 Get-NetGPO | select displayname, whenchanged
 ```
+
+#### Bloodhound
+```
+# apt install bloodhound
+neo4j console
+
+# Visit localhost and use neo4j:neo4j to log in and change password
+# Then back in terminal
+bloodhound
+
+
+```

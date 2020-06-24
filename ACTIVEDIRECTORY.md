@@ -92,12 +92,17 @@ Get-NetGPO | select displayname, whenchanged
 
 #### Bloodhound
 ```
-# apt install bloodhound
+# apt install bloodhound if not installed
 neo4j console
 
 # Visit localhost and use neo4j:neo4j to log in and change password
 # Then back in terminal
-bloodhound
+bloodhound    # Login with your creds in browser that opens 
 
+# Use https://github.com/BloodHoundAD/BloodHound/blob/master/Ingestors/SharpHound.ps1 on target
+. .\SharpHound.ps1
+Invoke-BloodHound -CollectionMethod All -Domain MARVEL.local -ZipFileName file.zip
 
+# Copy file.zip to hacking box with bloodhound open, and upload file.zip to bloodhound
+# Select hamburger icon on left top to start looking at imported data.
 ```

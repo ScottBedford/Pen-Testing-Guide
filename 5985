@@ -1,0 +1,8 @@
+### Using evil-winrm to get a shell from port 5985 with user and pass
+```
+# Install evil-winrm
+gem install evil-winrm
+
+# Get a shell
+evil-winrm -i <targetip> -u <username> -p <password>
+```

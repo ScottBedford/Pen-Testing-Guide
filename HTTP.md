@@ -5,6 +5,8 @@
 nikto -host thedomain.com
 
 dirb http://10.11.1.140
+
+gobuster dir -u http://192.168.124.52 -w /usr/share/dirb/wordlists/common.txt -k -x .txt,.php --threads 50
 ```
 ---
 

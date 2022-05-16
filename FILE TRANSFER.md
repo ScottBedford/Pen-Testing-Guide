@@ -6,6 +6,8 @@ find / -type d \( -perm -g+w -or -perm -o+w \) -exec ls -adl {} \;
 #### To host files in Kali
 ```
 python -m SimpleHTTPServer 80
+
+python3 -m http.server 80
 ```
 #### To download files
 ```

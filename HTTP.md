@@ -8,6 +8,11 @@ dirb http://10.11.1.140
 
 gobuster dir -u http://192.168.124.52 -w /usr/share/dirb/wordlists/common.txt -k -x .txt,.php --threads 50
 ```
+
+#### If it won't let your read robots.txt because you're not a search engine, use curl and googlebot Agent string
+```
+curl -A 'GoogleBot' http://$ip/robots.txt
+```
 ---
 
 ### To add IP's to your host file

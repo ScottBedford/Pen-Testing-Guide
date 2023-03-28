@@ -15,4 +15,15 @@ set RHOSTS <targetip>
 run
 
 ```
-####
+#### To access when anonymous login allowed
+```
+ftp anonymous@$ip
+password: anonymous
+```
+
+#### To identify location of ftp uploads, if unclear
+```
+Check the following config file to identify the upload location
+/etc/vsftpd.conf
+```
+
